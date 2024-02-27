@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="res/style.css">
+    <script src="https://kit.fontawesome.com/5c8e61db8d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <a href="#header"><img src="img/logo1.jpg" class="logo"></a>
+            <ul id="sidemenu">
+                <li> <a href="#header"> Főoldal</a></li>
+                <li> <a href="#about"> Rólam</a></li>
+                <li> <a href="#services"> Szolgáltatások</a></li>
+                <li> <a href="#portfolio"> Munkáim</a></li>
+                <li> <a href="#contact"> Kapcsolat</a></li>
+                <i class="fa-solid fa-arrow-right" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <p>Üdvözöllek a weboldalamon!</p>
+                <h1> Nagy <span>István</span> János vagyok,</h1>
+                <h2>a Pécsi Tudományegyetem  programtervező informatikus hallgatója.</h2>
+            </div>
+        </div>
+    </div>
+
+    <!------------ About Me ------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/user.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Rólam</h1>
+                    <p>István vagyok egy 20 éves egyetemista srác. 2020 óta foglalkozom komolyabban programok készítésével C# nyelven
+                        .Net keretrendszerrel. 2022-ben megismerkedtem C++ és Python nyelvekkel és megtanultam azok alapjait. Jelenleg az egyetemen Java és C++ 
+                        nyelvekkel foglalkozom. Szabadidőmben sok időt fordítok az önfejlesztésre főként c#/.Net  területen.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skilljeim</p>
+                        <p class="tab-links" onclick="opentab('experience')">Tapasztalatom</p>
+                        <p class="tab-links" onclick="opentab('education')">Végzettségem</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Windows UI Library/Figma Toolkit/Windows Community Toolkit/Font Awesome Library</li>
+                            <li><span>Web Fejlesztés</span><br>Alapszintű html/css/javascript tudás.</li>
+                            <li><span>Desktop App Fejlesztés</span><br>Középhaladó szintű C#/.Net, alapszintű C++/Python/Java tudás.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2020 - 2023</span><br>Több önálló projektemből szereztem tapasztalatot C#/.Net technológiák terén.
+                            A projektek közül néhányat <a href="https://github.com/istvan911" target="_blank">ide kattintva</a>, vagy a munkáimhoz görgetve megtekinthet.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018 - 2022</span><br>Szekszárdi I. Béla Gimnázium</li>
+                            <li><span>2022 -</span><br>Pécsi Tudományegyetem - Programtervező informatikus (Szoftverfejlesztő) Bsc(aktív hallgatói jogviszony)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------ Services ------------>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Szolgáltatásaim</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Letisztult, rendezett és responsive kinézet, a felhasználó igényeire szabva.
+                        Felhasznált technológiák: HTML/CSS/JavaScript.
+                    </p>
+                    <a href="#contact">Tudj meg többet</a>
+                </div>
+                <div>       
+                    <a href="#contact"><i class="fa-solid fa-crop-simple"></i></a>
+                    <h2>Backend fejlesztés</h2>
+                    <p>C#/Java/C++/Python technológiákkal a legjobb felhasználói élményért, a gépigény minimalizálásával, a maximális sebességre törekedve.</p>
+                    <a href="#contact">Tudj meg többet</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Desktop App Design</h2>
+                    <p>Letisztult, rendezett és responsive kinézet, a felhasználó igényeire szabva.
+                        Felhasznált technológiák: Windows UI Library/Figma Toolkit/Windows Community Toolkit/Font Awesome Library</p>
+                    <a href="#contact">Tudj meg többet</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------ Portfolio ------------>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Munkáim</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/work-1.png">
+                    <div class="layer">
+                        <h3>Music Player App</h3>
+                        <p>
+                            A projektet 2022 nyarán kezdtem el. A fejlesztése befejeződött. Az App kinézete letisztult,responsive és felesleges elemeket nem tartalmaz. 
+                            A kódrésze átlátható és teljesítményorientált. A hardverkövetelménye minimális.
+                        </p>
+                            <a href="https://github.com/istvan911/Music-App" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-2.png">
+                    <div class="layer">
+                        <h3>Quiz App</h3>
+                        <p>
+                            A projektet 2021 decemberében kezdtem el. Az aplikáció kinézete letisztult, felesleges elemeket nem tartalmaz.
+                            A kódrésze átlátható, bizonyos részek optimalizálásra szorulnak. A hardverkövetelménye minimális.
+                        </p>
+                            <a href="https://github.com/istvan911/Quiz-App" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-3.png">
+                    <div class="layer">
+                        <h3>Inventory Management System</h3>
+                        <p>
+                            A projektet 2023 tavaszán kezdtem el. Az App kinézete letisztult, responsive és felhasználóbarát. 
+                            A kódrésze átlátható, jól dokumentált és optimalizált. A hardverkövetelménye minimális.
+                        </p>
+                            <a href="https://github.com/istvan911/InventoryManagementSystem" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/istvan911" target="_blank" class="btn">Láss többet</a>
+        </div>
+    </div>
+          <!------------ Kapcsolat ------------>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Kapcsolatfelvétel</h1>
+                    <div class="asd">
+                        <div class="left-contact">
+                            <p><i class="fa-solid fa-envelope"></i> istvan.istvan@gmail.com</p>
+                        </div>
+                        <div class="right-contact">
+                            <p><i class="fa-solid fa-phone"></i>+36 12 345 6789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="https://github.com/istvan911" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://twitter.com/istvannagy120" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://discord.gg/S2Xrw289fe" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="img/my-cv.pdf" download class="btn btn2">CV letöltése</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2023 - István</p>
+        </div>
+    </div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
